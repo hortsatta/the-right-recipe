@@ -1,12 +1,10 @@
 <template>
-  <div class="h-screen bg-orange-50 bg-tile">
-    <TheHeader />
-    <RouterView />
-  </div>
+  <TheHeader />
+  <RouterView />
 </template>
 
 <script>
-import { TheHeader } from './components/base';
+import { TheHeader } from './components/core';
 
 export default {
   name: 'App',
