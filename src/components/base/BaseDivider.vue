@@ -1,11 +1,11 @@
 <template>
-  <div v-if="!vertical" class="h-[6px] relative w-full">
-    <div class="absolute top-0 w-full h-px bg-black opacity-40"></div>
-    <div class="absolute bottom-0 w-full h-px bg-black opacity-20"></div>
+  <div v-if="!vertical" class="flex flex-col justify-between h-[6px] w-full">
+    <div class="w-full h-px bg-border-400"></div>
+    <div class="w-full h-px bg-border-200"></div>
   </div>
-  <div v-else class="w=[6px] relative h-full">
-    <div class="absolute left-0 h-full w-px bg-black opacity-40"></div>
-    <div class="absolute right-0 h-full w-px bg-black opacity-20"></div>
+  <div v-else class="flex justify-between w=[6px] h-full">
+    <div class="h-full w-px bg-border-400"></div>
+    <div class="h-full w-px bg-border-200"></div>
   </div>
 </template>
 
