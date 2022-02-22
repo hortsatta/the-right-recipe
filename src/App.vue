@@ -1,13 +1,16 @@
 <template>
   <TheHeader />
-  <RouterView />
+  <main class="py-8">
+    <RouterView />
+  </main>
+  <TheFooter />
 </template>
 
 <script>
-import { TheHeader } from './components/core';
+import { TheHeader, TheFooter } from './components/core';
 
 export default {
   name: 'App',
-  components: { TheHeader }
+  components: { TheHeader, TheFooter }
 };
 </script>
