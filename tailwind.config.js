@@ -43,12 +43,19 @@ module.exports = {
       rose: colors.rose
     }),
     fontFamily: {
-      display: ['Cinzel', 'serif'],
+      display: ['Hoefler', 'serif'],
       body: ['Archer', 'sans-serif']
     },
     extend: {
+      colors: {
+        border: {
+          200: '#d5cec7',
+          400: '#98948e'
+        }
+      },
       fontFamily: {
         sans: ['Archer', ...defaultTheme.fontFamily.sans],
+        serif: ['Hoefler SC', ...defaultTheme.fontFamily.sans],
       }
     }
   },
@@ -56,10 +63,10 @@ module.exports = {
     plugin(({ addBase, theme }) => {
       const fontFamily = theme('fontFamily.display');
       addBase({
-        h1: { fontFamily, fontSize: theme('fontSize.2xl') },
-        h2: { fontFamily, fontSize: theme('fontSize.xl') },
-        h3: { fontFamily, fontSize: theme('fontSize.lg') },
-        h4: { fontFamily, fontSize: theme('fontSize.md') },
+        h1: { fontFamily, fontSize: theme('fontSize.3xl') },
+        h2: { fontFamily, fontSize: theme('fontSize.2xl') },
+        h3: { fontFamily, fontSize: theme('fontSize.xl') },
+        h4: { fontFamily, fontSize: theme('fontSize.xl') },
         h5: { fontFamily },
         h6: { fontFamily }
       });
