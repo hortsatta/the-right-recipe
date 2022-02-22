@@ -1,6 +1,6 @@
 <template>
   <a class="inline-block" :href="to">
-    <img class="w-[80px] h-[80px]" src="~@/assets/images/logo.svg" alt="Logo">
+    <img class="w-[162px] h-[60px]" src="~@/assets/images/logo.svg" alt="Logo">
     <h1 class="absolute w-0 h-0 opacity-0 overflow-hidden">
       The Right Recipe
     </h1>
