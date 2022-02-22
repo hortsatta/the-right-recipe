@@ -11,6 +11,18 @@
 }
 
 .button-bg {
-  background: url('~@/assets/images/button-bg.png') 0 no-repeat;
+  background: url('~@/assets/images/button-bg.png') 0 0 no-repeat;
   background-size: 100% 100%;
+  mask: radial-gradient(circle at left top, transparent 10px, black 11px), 
+    radial-gradient(circle at right top, transparent 10px, black 11px),
+    radial-gradient(circle at left bottom, transparent 10px, black 11px), 
+    radial-gradient(circle at right bottom, transparent 10px, black 11px),
+    linear-gradient(black,black); /* this layer is mandatory */
+  mask-composite: destination-in;
+  mask-composite: exclude; /* for non-webkit browser */
+}
+
+.ps .ps__rail-x,
+.ps .ps__rail-y {
+  z-index: 999;
 }
