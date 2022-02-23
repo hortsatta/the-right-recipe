@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: 'FeaturedRecipe',
+  name: 'RecipeFeatured',
   props: {
     item: {
       type: Object,
