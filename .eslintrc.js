@@ -13,17 +13,18 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'comma-dangle': 'off',
-    'import/prefer-default-export': 'off'
+    'comma-dangle': ['error', 'never'],
+    'import/prefer-default-export': 'off',
+    'vuejs-accessibility/label-has-for': 'off'
   },
   overrides: [
     {
       files: [
         '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
       ],
       env: {
-        jest: true,
+        jest: true
       }
     }
   ]
