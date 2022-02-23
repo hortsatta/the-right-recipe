@@ -18,9 +18,9 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
-    tooltip: String
-  }
+    tooltip: String,
+  },
 };
 </script>

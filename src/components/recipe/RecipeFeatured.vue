@@ -49,8 +49,8 @@ export default {
   props: {
     item: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   setup() {
     const handleViewRecipe = () => {
@@ -58,9 +58,9 @@ export default {
     };
 
     return {
-      handleViewRecipe
+      handleViewRecipe,
     };
-  }
+  },
 };
 </script>
 

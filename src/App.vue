@@ -11,6 +11,6 @@ import { TheHeader, TheFooter } from './components/core';
 
 export default {
   name: 'App',
-  components: { TheHeader, TheFooter }
+  components: { TheHeader, TheFooter },
 };
 </script>

@@ -33,6 +33,6 @@ import { AuthFormSignIn, AuthFormSignUp } from '@/components/auth';
 
 export default {
   name: 'AuthPage',
-  components: { AuthFormSignIn, AuthFormSignUp }
+  components: { AuthFormSignIn, AuthFormSignUp },
 };
 </script>

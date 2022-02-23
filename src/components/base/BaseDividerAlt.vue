@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'BaseDividerAlt'
+  name: 'BaseDividerAlt',
 };
 </script>

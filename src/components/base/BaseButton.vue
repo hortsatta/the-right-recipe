@@ -1,7 +1,10 @@
 <template>
-  <div class="inline-block py-1 border-y border-slate-400">
+  <div
+    class="inline-block py-1"
+    :class="!noBorder && 'border-y border-slate-400'"
+  >
     <button
-      class="relative"
+      class="relative w-full"
       type="button"
       @click="click"
       v-button
@@ -17,7 +20,8 @@
 export default {
   name: 'BaseButton',
   props: {
-    click: Function
-  }
+    noBorder: Boolean,
+    click: Function,
+  },
 };
 </script>

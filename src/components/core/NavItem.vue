@@ -11,10 +11,10 @@ export default {
   name: 'NavItem',
   props: {
     to: {
-      type: String,
-      required: true
+      type: [String, Object],
+      required: true,
     },
-    label: String
-  }
+    label: String,
+  },
 };
 </script>

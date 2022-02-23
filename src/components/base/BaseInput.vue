@@ -32,35 +32,35 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     value: {
       type: String,
-      default: ''
+      default: '',
     },
     placeholder: {
       type: String,
-      default: ''
+      default: '',
     },
-    label: String
+    label: String,
   },
   setup(props) {
     const {
       value: inputValue,
       errorMessage,
       handleBlur,
-      handleChange
+      handleChange,
     } = useField(props.name, undefined, {
-      initialValue: props.value
+      initialValue: props.value,
     });
 
     const errorClasses = computed(() => ([
       errorMessage?.value ? 'border-red-600' : 'border-border-400',
-      errorMessage?.value ? 'focus:outline-red-600' : 'focus:outline-blue-400'
+      errorMessage?.value ? 'focus:outline-red-600' : 'focus:outline-blue-400',
     ]));
 
     return {
@@ -68,8 +68,8 @@ export default {
       errorMessage,
       errorClasses,
       handleChange,
-      handleBlur
+      handleBlur,
     };
-  }
+  },
 };
 </script>

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'BaseFrame'
+  name: 'BaseFrame',
 };
 </script>

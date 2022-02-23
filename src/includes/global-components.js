@@ -5,7 +5,7 @@ import {
   BaseFrame,
   BaseIcon,
   BaseInput,
-  BaseSurface
+  BaseSurface,
 } from '@/components/base';
 
 export default {
@@ -17,5 +17,5 @@ export default {
     app.component('BaseIcon', BaseIcon);
     app.component('BaseInput', BaseInput);
     app.component('BaseSurface', BaseSurface);
-  }
+  },
 };

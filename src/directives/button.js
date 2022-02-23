@@ -14,7 +14,7 @@ export default {
       'border-[#c3a9a0]',
       'opacity-0',
       'ease-in-out',
-      'duration-100'
+      'duration-100',
     );
     bgDiv.innerHTML = `
       <div class="absolute left-[-5px] top-[-5px] w-[16px] h-[16px] bg-[#c3a9a0] rounded-br-[12px]"></div>
@@ -33,5 +33,5 @@ export default {
     // Add class and insert background element
     el.classList.add('group', 'relative', 'cursor-pointer');
     el.prepend(bgDiv);
-  }
+  },
 };

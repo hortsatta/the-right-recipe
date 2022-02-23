@@ -13,7 +13,7 @@
 export default {
   name: 'BaseDivider',
   props: {
-    vertical: Boolean
-  }
+    vertical: Boolean,
+  },
 };
 </script>

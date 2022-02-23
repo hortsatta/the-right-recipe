@@ -6,11 +6,11 @@
     <nav class="flex justify-between items-center h-full">
       <TheLogo class="ml-4" to="#" />
       <ul class="grid grid-rows-1 grid-flow-col font-serif text-xl">
-        <NavItem :to="'#'" :label="'Home'" />
+        <NavItem :to="{ name: 'Home' }" :label="'Home'" />
         <NavItem :to="'#'" :label="'Browse'" />
         <NavItem :to="'#'" :label="'Articles'" />
         <NavItem :to="'#'" :label="'About'" />
-        <NavItem :to="'#'" :label="'Login | Register'" />
+        <NavItem :to="{ name: 'Auth' }" :label="'Login | Register'" />
       </ul>
     </nav>
     <BaseDivider class="absolute left-0 bottom-0" />
@@ -25,7 +25,7 @@ export default {
   name: 'TheHeader',
   components: { NavItem, TheLogo },
   props: {
-    compact: Boolean
-  }
+    compact: Boolean,
+  },
 };
 </script>
