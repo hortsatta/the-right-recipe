@@ -7,7 +7,7 @@ import router from './router';
 import store from './store';
 import { buttonDirective } from './directives';
 import { globalComponents } from './includes';
-import './includes/firebase';
+import './includes/firebase.include';
 
 import './assets/css/tailwind.css';
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
