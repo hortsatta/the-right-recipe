@@ -11,7 +11,7 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
-      '3xl': '1600px'
+      '3xl': '1600px',
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -40,24 +40,24 @@ module.exports = {
       purple: colors.purple,
       fuchsia: colors.fuchsia,
       pink: colors.pink,
-      rose: colors.rose
+      rose: colors.rose,
     }),
     fontFamily: {
       display: ['Hoefler', 'serif'],
-      body: ['Archer', 'sans-serif']
+      body: ['Archer', 'sans-serif'],
     },
     extend: {
       colors: {
         border: {
           200: '#d5cec7',
-          400: '#98948e'
-        }
+          400: '#98948e',
+        },
       },
       fontFamily: {
         sans: ['Archer', ...defaultTheme.fontFamily.sans],
         serif: ['Hoefler SC', ...defaultTheme.fontFamily.sans],
-      }
-    }
+      },
+    },
   },
   plugins: [
     plugin(({ addBase, theme }) => {
@@ -68,8 +68,8 @@ module.exports = {
         h3: { fontFamily, fontSize: theme('fontSize.xl') },
         h4: { fontFamily, fontSize: theme('fontSize.xl') },
         h5: { fontFamily },
-        h6: { fontFamily }
+        h6: { fontFamily },
       });
-    })
-  ]
+    }),
+  ],
 };

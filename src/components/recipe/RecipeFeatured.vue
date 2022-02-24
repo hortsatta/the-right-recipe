@@ -52,7 +52,7 @@ export default {
       required: true,
     },
   },
-  setup() {
+  setup: () => {
     const handleViewRecipe = () => {
       console.log('press');
     };

@@ -27,7 +27,7 @@ import { RecipeFeatured, RecipeGrid } from '@/components/recipe';
 export default {
   name: 'HomePage',
   components: { RecipeFeatured, RecipeGrid },
-  setup() {
+  setup: () => {
     const featuredRecipe = computed(() => ({
       name: 'Chicken et al Queen',
       image: 'https://res.cloudinary.com/hortsatta/image/upload/v1645264562/chi_khvf3g.png',

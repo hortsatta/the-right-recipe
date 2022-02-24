@@ -8,7 +8,7 @@
       :class="errorClasses"
       :type="type"
       :name="name"
-      :id="name"
+      :id="id"
       :value="inputValue"
       :placeholder="placeholder"
       @input="handleChange"
@@ -34,6 +34,7 @@ export default {
       type: String,
       default: 'text',
     },
+    inputId: String,
     name: {
       type: String,
       required: true,
@@ -48,7 +49,7 @@ export default {
     },
     label: String,
   },
-  setup(props) {
+  setup: (props) => {
     const {
       value: inputValue,
       errorMessage,
@@ -63,10 +64,13 @@ export default {
       errorMessage?.value ? 'focus:outline-red-600' : 'focus:outline-blue-400',
     ]));
 
+    const id = computed(() => props.inputId || props.name);
+
     return {
       inputValue,
       errorMessage,
       errorClasses,
+      id,
       handleChange,
       handleBlur,
     };

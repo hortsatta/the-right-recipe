@@ -6,7 +6,7 @@
         <div class="pt-4">
           <h2 class="px-5 py-3">Sign In</h2>
           <BaseDivider />
-          <AuthFormSignIn class="px-5 pt-4 pb-10" />
+          <AuthFormSignIn class="px-5 pt-4 pb-10" @onSubmit="handleSignIn" />
         </div>
       </BaseSurface>
     </div>
@@ -21,7 +21,7 @@
         <div class="pt-4">
           <h2 class="px-5 py-3">Sign Up</h2>
           <BaseDivider />
-          <AuthFormSignUp class="px-5 pt-4 pb-10" />
+          <AuthFormSignUp class="px-5 pt-4 pb-10" @onSubmit="handleRegister" />
         </div>
       </BaseSurface>
     </div>
@@ -29,10 +29,28 @@
 </template>
 
 <script>
+import { useStore } from 'vuex';
+
+import { getAuthActionType } from '@/store/auth';
 import { AuthFormSignIn, AuthFormSignUp } from '@/components/auth';
 
 export default {
   name: 'AuthPage',
   components: { AuthFormSignIn, AuthFormSignUp },
+  setup: () => {
+    const store = useStore();
+
+    const handleSignIn = (data) => {
+      const { email, password } = data || {};
+      store.dispatch(getAuthActionType(true).SIGN_IN_START, { email, password });
+    };
+
+    const handleRegister = (data) => {
+      const { email, password } = data || {};
+      store.dispatch(getAuthActionType(true).SIGN_UP_START, { email, password });
+    };
+
+    return { handleSignIn, handleRegister };
+  },
 };
 </script>
