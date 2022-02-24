@@ -1,2 +1,2 @@
-export * from './firebase';
-export { default as globalComponents } from './global-components';
+export * from './firebase.include';
+export { default as globalComponents } from './global-components.include';

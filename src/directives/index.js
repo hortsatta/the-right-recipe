@@ -1,1 +1,1 @@
-export { default as buttonDirective } from './button';
+export { default as buttonDirective } from './button.directive';
