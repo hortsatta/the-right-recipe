@@ -1,14 +1,4 @@
-const getAuthMutationType = (includeNamespace) => {
-  const namespace = includeNamespace ? 'auth/' : '';
-
-  return {
-    SET_IS_LOGGED_IN: `${namespace}setIsLoggedIn`,
-    SET_IS_SIGN_IN_SUBMITTING: `${namespace}setIsSignInSubmitting`,
-    SET_IS_SIGN_UP_SUBMITTING: `${namespace}setIsSignUpSubmitting`,
-  };
-};
-
-const getAuthActionType = (includeNamespace) => {
+export default (includeNamespace) => {
   const namespace = includeNamespace ? 'auth/' : '';
 
   return {
@@ -18,7 +8,6 @@ const getAuthActionType = (includeNamespace) => {
     SIGN_IN_START: `${namespace}signInStart`,
     SIGN_IN_SUCCESS: `${namespace}signInSuccess`,
     SIGN_IN_FAILURE: `${namespace}signInFailure`,
+    CHECK_USER_SESSION: `${namespace}checkUserSession`,
   };
 };
-
-export { getAuthMutationType, getAuthActionType };

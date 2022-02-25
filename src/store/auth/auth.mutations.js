@@ -1,13 +1,28 @@
-import { getAuthMutationType } from './auth.types';
+import getAuthActionType from './auth.types';
 
 export default {
-  [getAuthMutationType().SET_IS_LOGGED_IN]: (state, payload) => {
+  [getAuthActionType().SIGN_UP_START]: (state) => {
+    state.isSignUpSubmitting = true;
+  },
+  [getAuthActionType().SIGN_IN_START]: (state) => {
+    state.isSignInSubmitting = true;
+  },
+  [getAuthActionType().SIGN_UP_SUCCESS]: (state) => {
+    state.isSignUpSubmitting = false;
+  },
+  [getAuthActionType().SIGN_IN_SUCCESS]: (state) => {
+    state.isSignInSubmitting = false;
+    state.isLoggedIn = true;
+  },
+  [getAuthActionType().SIGN_UP_FAILURE]: (state) => {
+    state.isSignUpSubmitting = false;
+    state.isSignInSubmitting = false;
+  },
+  [getAuthActionType().SIGN_IN_FAILURE]: (state) => {
+    state.isSignUpSubmitting = false;
+    state.isSignInSubmitting = false;
+  },
+  [getAuthActionType().CHECK_USER_SESSION]: (state, payload) => {
     state.isLoggedIn = payload;
-  },
-  [getAuthMutationType().SET_IS_SIGN_IN_SUBMITTING]: (state, payload) => {
-    state.isSignInSubmitting = payload;
-  },
-  [getAuthMutationType().SET_IS_SIGN_UP_SUBMITTING]: (state, payload) => {
-    state.isSignUpSubmitting = payload;
   },
 };

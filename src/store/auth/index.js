@@ -10,4 +10,4 @@ export const auth = {
   actions,
   getters,
 };
-export * from './auth.types';
+export { default as getAuthActionType } from './auth.types';
