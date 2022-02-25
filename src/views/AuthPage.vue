@@ -46,8 +46,12 @@ export default {
     };
 
     const handleRegister = (data) => {
-      const { email, password } = data || {};
-      store.dispatch(getAuthActionType(true).SIGN_UP_START, { email, password });
+      const { email, password, displayName } = data || {};
+      store.dispatch(getAuthActionType(true).SIGN_UP_START, {
+        email,
+        password,
+        additionalInfo: { displayName },
+      });
     };
 
     return { handleSignIn, handleRegister };
