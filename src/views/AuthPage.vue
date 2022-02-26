@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { watch } from 'vue';
+import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
 import { getAuthActionType } from '@/store/auth';
@@ -39,6 +41,15 @@ export default {
   components: { AuthFormSignIn, AuthFormSignUp },
   setup: () => {
     const store = useStore();
+    const router = useRouter();
+
+    watch(
+      () => (store.state.auth.isLoggedIn),
+      (value) => {
+        if (!value) { return; }
+        router.push({ name: 'home' });
+      },
+    );
 
     const handleSignIn = (data) => {
       const { email, password } = data || {};
