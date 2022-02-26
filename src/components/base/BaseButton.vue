@@ -4,7 +4,7 @@
     :class="!noBorder && 'border-y border-slate-400'"
   >
     <button
-      class="relative w-full min-h-[44px] disabled:saturate-0"
+      class="group relative cursor-pointer w-full min-h-[44px] disabled:saturate-0"
       type="button"
       :disabled="disabled"
       @click.prevent="this.$emit('click')"

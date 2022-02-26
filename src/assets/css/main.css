@@ -10,6 +10,11 @@
   background: url('~@/assets/images/bg-tile.png') 0 0 repeat;
 }
 
+.base-button:hover .button-bg,
+.router-link-active .button-bg {
+  opacity: 100;
+}
+
 .button-bg {
   background: url('~@/assets/images/button-bg.png') 0 0 no-repeat;
   background-size: 100% 100%;

@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-flow-row divide-y divide-border-200">
     <div class="px-1 py-1" v-for="item in items" :key="item.id">
-      <div v-button>
+      <div class="group relative cursor-pointer" v-button>
         <div class="relative flex items-center z-10">
           <!-- Recipe image -->
           <div class="relative mr-4 pl-5 pr-4 py-3">

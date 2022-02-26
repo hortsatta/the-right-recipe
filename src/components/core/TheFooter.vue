@@ -3,7 +3,7 @@
     <BaseDivider class="absolute top-0 left-0" />
     <div>
       <ul class="flex items-center justify-between">
-        <li class="py-2 px-4" v-button>
+        <li class="group relative cursor-pointer py-2 px-4" v-button>
           <a
             class="relative leading-none flex items-center z-10"
             href="https://github.com/hortsatta/the-right-recipe"

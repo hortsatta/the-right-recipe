@@ -30,8 +30,6 @@ export default {
         <div class="h-full w-[1px] bg-[#c3a9a0]"></div>
       </div>
     `;
-    // Add class and insert background element
-    el.classList.add('group', 'relative', 'cursor-pointer');
     el.prepend(bgDiv);
   },
 };
