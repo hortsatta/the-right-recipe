@@ -8,7 +8,7 @@
     <!-- Form controls -->
     <BaseButton
       class="w-full"
-      :loading="isSignInSubmitting"
+      :loading="isSignInOutSubmitting"
       :disabled="isSubmitting"
       @click="handleSubmit"
     >
@@ -45,7 +45,7 @@ export default {
     });
 
     return {
-      isSignInSubmitting: computed(() => store.state.auth.isSignInSubmitting),
+      isSignInOutSubmitting: computed(() => store.state.auth.isSignInOutSubmitting),
       isSubmitting: computed(() => store.getters['auth/isSubmitting']),
       handleSubmit,
     };

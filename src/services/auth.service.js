@@ -2,6 +2,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut as signOutUser,
   updateProfile,
 } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
@@ -36,4 +37,9 @@ const signIn = async (email, password) => {
   return userCredential;
 };
 
-export { register, signIn };
+const signOut = async () => {
+  const auth = getAuth();
+  await signOutUser(auth);
+};
+
+export { register, signIn, signOut };

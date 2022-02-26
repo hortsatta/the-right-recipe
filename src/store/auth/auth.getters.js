@@ -1,5 +1,5 @@
 export default {
   isSubmitting: (state) => (
-    state.isSignUpSubmitting || state.isSignInSubmitting
+    state.isSignUpSubmitting || state.isSignInOutSubmitting
   ),
 };

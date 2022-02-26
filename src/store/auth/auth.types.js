@@ -8,6 +8,9 @@ export default (includeNamespace) => {
     SIGN_IN_START: `${namespace}signInStart`,
     SIGN_IN_SUCCESS: `${namespace}signInSuccess`,
     SIGN_IN_FAILURE: `${namespace}signInFailure`,
+    SIGN_OUT_START: `${namespace}signOutStart`,
+    SIGN_OUT_SUCCESS: `${namespace}signOutSuccess`,
+    SIGN_OUT_FAILURE: `${namespace}signOutFailure`,
     CHECK_USER_SESSION: `${namespace}checkUserSession`,
   };
 };

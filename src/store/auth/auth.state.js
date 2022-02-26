@@ -1,5 +1,5 @@
 export default () => ({
   isLoggedIn: undefined,
-  isSignInSubmitting: false,
+  isSignInOutSubmitting: false,
   isSignUpSubmitting: false,
 });
