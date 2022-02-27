@@ -1,16 +1,40 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import { AuthPage, HomePage } from '@/views';
+import { store } from '@/store';
+import { AuthPage, HomePage, UserAccountPage } from '@/views';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: HomePage,
   },
   {
+    path: '/recipes',
+    name: 'recipes',
+    component: HomePage,
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: HomePage,
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: HomePage,
+  },
+  {
+    path: '/account',
+    name: 'account',
+    meta: {
+      requiresAuth: true,
+    },
+    component: UserAccountPage,
+  },
+  {
     path: '/auth',
-    name: 'Auth',
+    name: 'auth',
     component: AuthPage,
   },
 ];
@@ -20,17 +44,22 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (!to.matched.some((route) => route.meta.requiresAuth)) {
-//     next();
-//     return;
-//   }
+router.beforeEach((to, from, next) => {
+  if (to.name === 'auth' && store.state.auth.isLoggedIn) {
+    next({ name: 'home' });
+    return;
+  }
 
-//   if (store.state.auth.userLoggedIn) {
-//     next();
-//   } else {
-//     next({ name: 'home' });
-//   }
-// });
+  if (!to.matched.some((route) => route.meta.requiresAuth)) {
+    next();
+    return;
+  }
+
+  if (store.state.auth.isLoggedIn) {
+    next();
+  } else {
+    next({ name: 'home' });
+  }
+});
 
 export default router;

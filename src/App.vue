@@ -1,9 +1,9 @@
 <template>
-  <TheHeader />
-  <main class="py-8">
-    <RouterView />
-  </main>
-  <TheFooter />
+    <TheHeader />
+    <main class="mt-[124px] py-8 min-h-[calc(100vh-196px)]">
+      <RouterView />
+    </main>
+    <TheFooter />
 </template>
 
 <script>
