@@ -5,13 +5,15 @@ import {
   signOut as signOutUser,
   updateProfile,
 } from 'firebase/auth';
-import { setDoc, doc } from 'firebase/firestore';
+import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
-import { db, CollectionName } from '@/includes/firebase.include';
+import { CollectionName } from '@/includes/firebase.include';
 
 const register = async (email, password, additionalInfo) => {
-  // Create user
+  // Initialize firestore auth and db
   const auth = getAuth();
+  const db = getFirestore();
+  // Create user
   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
   // Get additional info, if exists then update user details
   const { displayName } = additionalInfo || {};
