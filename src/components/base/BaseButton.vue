@@ -34,7 +34,7 @@
             ></path>
           </svg>
         </div>
-        <span v-else class="text-lg font-serif">
+        <span v-else class="flex items-center justify-center text-lg font-serif">
           <slot></slot>
         </span>
       </div>
