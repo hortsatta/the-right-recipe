@@ -1,6 +1,6 @@
 <template>
     <TheHeader />
-    <main class="mt-[124px] py-8 min-h-[calc(100vh-196px)]">
+    <main class="pt-[calc(124px+2rem)] pb-8 min-h-[calc(100vh-72px)]">
       <RouterView />
     </main>
     <TheFooter />
