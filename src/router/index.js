@@ -1,7 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
 import { store } from '@/store';
-import { AuthPage, HomePage, UserAccountPage } from '@/views';
+import { HomePage } from '@/views';
+import ChildViewPage from '@/views/ChildViewPage.vue';
+
+// Lazy load components
+const RecipesPage = () => import(/* webpackChunkName: "group-recipes" */ '@/views/RecipesPage.vue');
+const RecipeAddPage = () => import(/* webpackChunkName: "group-recipes" */ '@/views/RecipeAddPage.vue');
+const AuthPage = () => import('@/views/AuthPage.vue');
+const UserAccountPage = () => import('@/views/UserAccountPage.vue');
 
 const routes = [
   {
@@ -12,7 +18,19 @@ const routes = [
   {
     path: '/recipes',
     name: 'recipes',
-    component: HomePage,
+    component: ChildViewPage,
+    children: [
+      {
+        path: '',
+        name: 'recipes-list',
+        component: RecipesPage,
+      },
+      {
+        path: 'new',
+        name: 'recipes-add',
+        component: RecipeAddPage,
+      },
+    ],
   },
   {
     path: '/blog',

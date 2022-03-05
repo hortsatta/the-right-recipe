@@ -25,7 +25,7 @@
           class="relative z-10 rotate-anim"
           :src="item.image"
           alt="featured recipe image"
-        >
+        />
         <div class="absolute w-3/4 h-3/4 left-1/2 top-[60%] bg-[#341800] rounded-full
           transform -translate-x-1/2 -translate-y-1/2 blur-2xl opacity-80"></div>
         <div class="absolute w-[92%] h-[92%] left-1/2 top-[52%] bg-[#341800] rounded-full

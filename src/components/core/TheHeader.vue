@@ -15,9 +15,9 @@
         />
         <ul class="grid grid-rows-1 grid-flow-col gap-1 font-serif text-xl">
           <NavItem :to="{ name: 'home' }" :label="'Home'" />
-          <NavItem :to="'/recipes'" :label="'Browse'" />
-          <NavItem :to="'/blog'" :label="'Blog'" />
-          <NavItem :to="'/about'" :label="'About'" />
+          <NavItem :to="{ name: 'recipes-list' }" :label="'Recipes'" />
+          <NavItem :to="{ name: 'blog' }" :label="'Blog'" />
+          <NavItem :to="{ name: 'about' }" :label="'About'" />
           <NavItem v-if="isLoggedIn" :to="{ name: 'account' }" :label="'Account'" :icon="'face'" />
           <NavItem v-else :to="{ name: 'auth' }" :label="'Login | Register'" />
         </ul>
